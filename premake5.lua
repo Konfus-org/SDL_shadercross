@@ -1,3 +1,4 @@
+dofile("Premake-Utils/premakeFromCmake.lua")
 
 local sdlInstall = path.getabsolute("../SDL/cmake/install/" .. os.target() .. "/Release/cmake")
 local cmakeOptions = table.concat({
@@ -11,4 +12,5 @@ local cmakeOptions = table.concat({
     '-DCMAKE_CXX_STANDARD_REQUIRED=ON',
     '-DCMAKE_CXX_EXTENSIONS=OFF'
 }, " ")
+
 CreateProjectFromCMake("SDL3_Shadercross", "./", cmakeOptions)
