@@ -1,4 +1,4 @@
-dofile("Premake-Utils/premakeFromCmake.lua")
+dofile("./premake/premakeFromCmake.lua")
 
 local sdlInstall = path.getabsolute("../SDL/cmake/install/" .. os.target() .. "/Release/cmake")
 local cmakeOptions = table.concat({
